@@ -7,7 +7,7 @@ def alt_queue_on_message_received(ch, method, properties, body):
 def main_queue_on_message_received(ch, method, properties, body):
     print(f'Main: received new message: {body}')
 
-host = '172.24.0.2'
+host = '172.24.0.4'
 connection_parameters = pika.ConnectionParameters(host)
 
 connection = pika.BlockingConnection(connection_parameters)
@@ -16,7 +16,7 @@ channel = connection.channel()
 
 channel.exchange_declare(exchange='altexchange', exchange_type=ExchangeType.fanout)
 channel.exchange_declare(exchange='mainexchange', exchange_type=ExchangeType.direct, arguments={
-    'alternative-exchange':'altexchange'
+    'alternate-exchange':'altexchange'
 })
 channel.queue_declare(queue='altexchangequeue')
 channel.queue_bind('altexchangequeue', 'altexchange')
