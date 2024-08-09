@@ -48,7 +48,7 @@ Ensure RabbitMQ server is installed and running on your machine. You can downloa
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/yourusername/RabbitMQ_Python.git
+   git clone https://github.com/pedro162/RabbitMQ_Python.git
    cd RabbitMQ_Python
    ```
 
