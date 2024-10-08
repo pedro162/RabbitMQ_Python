@@ -27,3 +27,7 @@ channel.basic_consume(queue='letterbox', on_message_callback=on_queue_on_message
 
 print('Starting Consuming')
 channel.start_consuming()
+"""
+    Last class: 04
+    Link: https://www.youtube.com/watch?v=kwQDpHcM4HM&list=PLalrWAGybpB-UHbRDhFsBgXJM1g6T4IvO&index=4
+"""
